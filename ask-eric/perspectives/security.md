@@ -10,7 +10,7 @@
 
 1. **Broken Access Control** — 權限檢查在每個 endpoint 都有嗎？使用者能存取不該存取的資源嗎？伺服器端有沒有代使用者發出請求到內部服務（SSRF）？（連續三屆第一名，最常見的漏洞）
 2. **Security Misconfiguration** — 預設配置安全嗎？有沒有不必要的功能被開啟？debug mode 關了嗎？預設密碼改了嗎？雲端資源的 IAM 設定正確嗎？
-3. **Software Supply Chain Failures** — 依賴套件安全嗎？來源可信嗎？build pipeline 有沒有被污染的可能？有沒有用 lock file 鎖定版本？有沒有持續掃描（dependabot / npm audit / Snyk）？不只是「用了有漏洞的套件」，是整個供應鏈都可能被攻擊
+3. **Software Supply Chain Failures** — 依賴套件安全嗎？來源可信嗎？build pipeline 有沒有被污染的可能？有沒有用 lock file 鎖定版本？有沒有持續掃描（dependabot / npm audit / Snyk）？有沒有維護 SBOM（Software Bill of Materials）？你知道你的系統裡跑了什麼嗎？出事的時候能在 5 分鐘內回答「我們有沒有用到這個有漏洞的套件」嗎？不只是「用了有漏洞的套件」，是整個供應鏈都可能被攻擊
 4. **Cryptographic Failures** — 敏感資料有沒有被正確加密？傳輸中有 TLS 嗎？log 裡有沒有 PII？密碼有沒有用適當的 hash（bcrypt/argon2，不是 MD5/SHA1）？
 5. **Injection** — 使用者輸入有沒有被直接拼接到 SQL/command/template/HTML 裡？（包含 SQL injection、XSS、command injection）
 6. **Insecure Design** — 安全有沒有在設計階段就考慮？threat modeling 做了嗎？這不是 code 層面的問題，是架構層面的 — 設計本身就不安全，code 寫得再好也救不了
