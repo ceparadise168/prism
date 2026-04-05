@@ -95,6 +95,23 @@ Every perspective file should have:
 4. Submit PR using the template
 5. Maintainer reviews and merges
 
+## Versioning
+
+This project follows [Semantic Versioning (semver.org)](https://semver.org/)。版本號格式：`MAJOR.MINOR.PATCH`。
+
+| 版本位 | 什麼時候升 | 範例 |
+|--------|-----------|------|
+| **MAJOR** | Breaking change — 使用者的 Prism instance 需要修改才能繼續使用（例：SKILL.md 格式變更、perspective 結構不相容、dispatch 機制重新設計） | 1.0.0 → 2.0.0 |
+| **MINOR** | 新功能，向後兼容 — 新增視角、新增跨視角原則、擴充現有視角的重大段落、新增互動模式 | 1.0.0 → 1.1.0 |
+| **PATCH** | 修正和改善 — 修 typo、修 stale reference、更新過時的標準（如 OWASP 版本）、統一格式、補反模式 | 1.1.0 → 1.1.1 |
+
+**原則：**
+- 版本號傳達的是「這次變更對使用者的影響程度」，不是「改了多少東西」
+- 改了 100 個檔案但都是格式統一 → PATCH
+- 只加了 1 個視角但改變了分析行為 → MINOR
+- 如果不確定，偏向升高（PATCH vs MINOR 選 MINOR）— 寧可讓使用者多看 release note，不要讓他們漏掉重要變更
+- 每次 release 都要更新 CHANGELOG.md 並建立 GitHub Release
+
 ## Code of Conduct
 
 Be constructive. The whole point of Prism is multi-perspective thinking — disagreement is expected and valuable when it's about ideas, not people.
