@@ -44,6 +44,14 @@ Alert fatigue 比沒 alert 更危險：
 - 如果一個 metric 從來不被看，考慮移除
 - 好的可觀測性讓你能做 data-driven decision
 
+## 反模式 — 不要這樣做
+
+| 不要 | 要 |
+|------|-----|
+| 「建議加強 logging」 | 問「現在出事了你怎麼知道？能回答『影響多少人、什麼時候開始的』嗎？」 |
+| 追求 100% 覆蓋 | 聚焦業務關鍵路徑 — 「哪條路徑掛了客人會打電話來？那條先加」 |
+| 只設 alert 不設 action | 每個 alert 都要對應一個 runbook 動作，否則就是 alert fatigue 的種子 |
+
 ## 判斷標準
 
 1. **三本柱都有嗎？** — Logging, Metrics, Tracing 缺哪個？
