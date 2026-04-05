@@ -4,14 +4,31 @@ Eric 的工程思維數位分身。不是知識庫，是思維框架。
 
 ## 安裝
 
-```bash
-# 從終端機安裝
-git clone https://github.com/ceparadise168/prism.git
-claude skill install ./prism/ask-eric
+### Claude Code
 
-# 或在 Claude Code 對話中安裝
-/skill install /path/to/ask-eric
+Claude Code 會自動發現 `~/.claude/skills/` 和 `.claude/skills/` 裡的 skill。
+
+```bash
+# 個人安裝（所有專案都能用）
+git clone https://github.com/ceparadise168/prism.git
+cp -r prism/ask-eric ~/.claude/skills/ask-eric
+
+# 或 symlink（方便 git pull 更新）
+git clone https://github.com/ceparadise168/prism.git ~/prism
+ln -s ~/prism/ask-eric ~/.claude/skills/ask-eric
 ```
+
+安裝後重新啟動 Claude Code，輸入 `/` 就能看到 `ask-eric`。
+
+**驗證安裝成功：**
+
+```
+/ask-eric 你好
+```
+
+**更新：** `cd ~/prism && git pull`（symlink 方式）或重新 `cp -r`。
+
+**移除：** `rm -rf ~/.claude/skills/ask-eric`
 
 ## 使用
 

@@ -129,23 +129,59 @@ Cross-perspective consensus: "你的問題是你的論點不夠強，而不是�
 
 ### Use with Claude Code
 
-```bash
-# Clone the repo
-git clone https://github.com/ceparadise168/prism.git
+**Option A: Personal install (available in all your projects)**
 
-# Install the skill
-claude skill install ./prism/ask-eric
+```bash
+git clone https://github.com/ceparadise168/prism.git
+cp -r prism/ask-eric ~/.claude/skills/ask-eric
 ```
 
-Then in any Claude Code session:
+**Option B: Project install (shared with your team via git)**
+
+```bash
+git clone https://github.com/ceparadise168/prism.git
+cp -r prism/ask-eric .claude/skills/ask-eric
+# then commit .claude/skills/ask-eric/ to your repo
+```
+
+**Option C: Symlink (auto-sync with upstream)**
+
+```bash
+git clone https://github.com/ceparadise168/prism.git ~/prism
+ln -s ~/prism/ask-eric ~/.claude/skills/ask-eric
+```
+
+After installation, restart Claude Code. The skill is auto-discovered — type `/` and look for `ask-eric`:
 
 ```
 /ask-eric 我們打算把 monolith 拆成 microservices，團隊只有 5 個人，你怎麼看？
 ```
 
+**Verify it works:**
+
+```
+/ask-eric 你好
+```
+
+You should get a response in Eric's voice, not generic Claude output.
+
+**Uninstall:**
+
+```bash
+rm -rf ~/.claude/skills/ask-eric     # personal install
+rm -rf .claude/skills/ask-eric       # project install
+```
+
+**Update:**
+
+```bash
+cd ~/prism && git pull                          # if you used symlink (Option C)
+cp -r ~/prism/ask-eric ~/.claude/skills/ask-eric  # if you used copy (Option A)
+```
+
 ### Use with Any LLM (ChatGPT, Gemini, etc.)
 
-Copy the content of `eric-engineering-mind.md` into your LLM's system prompt or paste it at the start of a conversation. Then ask your question.
+Copy the content of [`eric-engineering-mind.md`](eric-engineering-mind.md) into your LLM's system prompt, or paste it at the start of a conversation. Then ask your question normally — no slash command needed.
 
 ### Create Your Own Prism
 
