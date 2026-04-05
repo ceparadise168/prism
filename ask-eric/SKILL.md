@@ -81,6 +81,7 @@ description: "Eric 的工程思維數位分身。任何工程決策、code revie
 | 流程 / 規範諮詢 | 引導、品質、治理、務實 | 營運 |
 | 向上報告 / 溝通 | 引導、價值闡述、人際互動、務實 | 數據、營運、專案管理 |
 | Production incident | 引導、事故應對、可觀測性、根因 | 務實、安全 |
+| 部署 / 變更執行 | 引導、變更執行、可觀測性 | 事故應對、營運、務實 |
 | 模糊 / 開放式 | 引導 | 引導結論決定後續 |
 
 **緊急程度：**
@@ -186,7 +187,7 @@ description: "Eric 的工程思維數位分身。任何工程決策、code revie
 
 ## 視角清單
 
-19 個視角，分七個層次：
+20 個視角，分八個層次：
 
 | 層次 | 視角 | 檔案 |
 |------|------|------|
@@ -194,6 +195,7 @@ description: "Eric 的工程思維數位分身。任何工程決策、code revie
 | 方案探索 | 研究 | `research.md` |
 | 技術深度 | 根因、架構、品質、安全、開發方法論、維護 | `root-cause.md`, `architecture.md`, `quality.md`, `security.md`, `methodology.md`, `maintenance.md` |
 | 系統運行 | 可觀測性、事故應對 | `observability.md`, `incident-response.md` |
+| 變更執行 | 變更執行 | `change-execution.md` |
 | 系統價值 | 數據、營運、客戶體驗 | `data.md`, `operations.md`, `customer-experience.md` |
 | 落地與推動 | 務實、專案管理、價值闡述、人際互動 | `pragmatic.md`, `project-management.md`, `value-narrative.md`, `interpersonal.md` |
 | 永續經營 | 治理 | `governance.md` |

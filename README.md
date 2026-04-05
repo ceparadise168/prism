@@ -112,7 +112,7 @@ Cross-perspective consensus: "你的問題是你的論點不夠強，而不是�
 
 </details>
 
-## 19 Perspectives, 7 Layers
+## 20 Perspectives, 8 Layers
 
 | Layer | Perspectives | Core Question |
 |-------|-------------|---------------|
@@ -120,6 +120,7 @@ Cross-perspective consensus: "你的問題是你的論點不夠強，而不是�
 | Solution Exploration | Research | What are the options? |
 | Technical Depth | Root Cause, Architecture, Quality, Security, Methodology, Maintenance | How to do it right? |
 | System Runtime | Observability, Incident Response | Can we see it? What if it breaks? |
+| Change Execution | Change Execution | Dependencies, rollback, verification, notification? |
 | System Value | Data, Operations, Customer Experience | Does it create a flywheel? |
 | Execution & Advocacy | Pragmatic, Project Management, Value Narrative, Interpersonal | Can we ship it? Can we get buy-in? |
 | Sustainability | Governance | Can it live and grow? |
@@ -152,7 +153,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for a step-by-step guide.
 
 ## Example: `ask-eric`
 
-The included `ask-eric/` directory is a complete Prism instance — a digital twin of Eric's engineering mindset. It demonstrates all 19 perspectives with Eric's specific principles, anti-patterns, and voice.
+The included `ask-eric/` directory is a complete Prism instance — a digital twin of Eric's engineering mindset. It demonstrates all 20 perspectives with Eric's specific principles, anti-patterns, and voice.
 
 ```
 /ask-eric 我們打算把 monolith 拆成 microservices，團隊只有 5 個人，你怎麼看？
@@ -175,7 +176,7 @@ The skill will:
 prism/
 ├── ask-eric/                      # Example Prism instance
 │   ├── SKILL.md                   # Coordinator (persona + dispatch + synthesis)
-│   ├── perspectives/              # 19 perspective files
+│   ├── perspectives/              # 20 perspective files
 │   │   ├── guide.md               # Gate power — question the question
 │   │   ├── user-story.md          # JTBD and Design Thinking
 │   │   ├── research.md            # Multi-option trade-off analysis
@@ -187,6 +188,7 @@ prism/
 │   │   ├── maintenance.md         # Tech debt, handoff experience
 │   │   ├── observability.md       # Logging, metrics, tracing
 │   │   ├── incident-response.md   # Stop bleeding, blameless postmortem
+│   │   ├── change-execution.md   # Dependencies, rollback, verification, notification
 │   │   ├── data.md                # Data quality, decision support
 │   │   ├── operations.md          # Closed loop, flywheel
 │   │   ├── customer-experience.md # JTBD, experience consistency

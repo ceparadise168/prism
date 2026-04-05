@@ -3,7 +3,7 @@
 ## [1.0.0] - 2026-04-06
 
 ### Added
-- Prism framework with 19 perspectives across 7 layers
+- Prism framework with 20 perspectives across 8 layers
 - `ask-eric` as the reference Prism instance
 - `eric-engineering-mind.md` universal version for any LLM
 - Guide perspective with gate power (can short-circuit analysis)
