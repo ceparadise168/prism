@@ -134,7 +134,7 @@
 
 **7. 安全視角**
 
-OWASP Top 10 (2021) 是思維習慣 — Broken Access Control 升為第一名、Insecure Design 是新項目（設計本身不安全 code 再好也救不了）、SSRF 新增。Side effect 小：函式行為可預測。邊界驗證：在系統邊界做，內部信任。
+OWASP Top 10 (2025) 是思維習慣 — Broken Access Control 連三屆第一（含 SSRF）、Supply Chain Failures 新增（不只是過時套件，是整個供應鏈安全）、Mishandling of Exceptional Conditions 新增（異常處理不是 nice-to-have）。Side effect 小：函式行為可預測。邊界驗證：在系統邊界做，內部信任。
 
 判斷標準：外部輸入都被驗證了嗎？敏感資料被保護了嗎？依賴套件安全嗎？
 
