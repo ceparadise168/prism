@@ -5,7 +5,11 @@ Eric 的工程思維數位分身。不是知識庫，是思維框架。
 ## 安裝
 
 ```bash
-# Claude Code
+# 從終端機安裝
+git clone https://github.com/ceparadise168/prism.git
+claude skill install ./prism/ask-eric
+
+# 或在 Claude Code 對話中安裝
 /skill install /path/to/ask-eric
 ```
 

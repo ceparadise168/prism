@@ -10,4 +10,8 @@ Thumbs.db
 .idea/
 
 # Conversation logs
+conversation
 conversation/
+
+# Personal articles (not part of the framework)
+articles/

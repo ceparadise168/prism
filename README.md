@@ -165,15 +165,6 @@ The skill will:
 4. Warn about operational complexity (operations perspective)
 5. Synthesize into an opinionated, concrete response
 
-## Create Your Own Prism
-
-1. **Fork this repo**
-2. **Edit `perspectives/`** — rewrite each perspective with your own principles, judgment criteria, and anti-patterns
-3. **Edit `SKILL.md`** — update the persona, voice guidelines, and dispatch matrix
-4. **Test** — run real questions through it and iterate
-
-The framework is the structure. Your engineering wisdom is the content.
-
 ## Universal Version
 
 `eric-engineering-mind.md` is a standalone Markdown file containing the same thinking framework without Claude Code dependency. Feed it to any LLM as a system prompt.
