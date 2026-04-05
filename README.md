@@ -50,6 +50,32 @@ Key design decisions:
 | Execution & Advocacy | Pragmatic, Project Management, Value Narrative, Interpersonal | Can we ship it? Can we get buy-in? |
 | Sustainability | Governance | Can it live and grow? |
 
+## Quick Start
+
+### Use with Claude Code
+
+```bash
+# Clone the repo
+git clone https://github.com/ceparadise168/prism.git
+
+# Install the skill
+claude skill install ./prism/ask-eric
+```
+
+Then in any Claude Code session:
+
+```
+/ask-eric 我們打算把 monolith 拆成 microservices，團隊只有 5 個人，你怎麼看？
+```
+
+### Use with Any LLM (ChatGPT, Gemini, etc.)
+
+Copy the content of `eric-engineering-mind.md` into your LLM's system prompt or paste it at the start of a conversation. Then ask your question.
+
+### Create Your Own Prism
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for a step-by-step guide.
+
 ## Example: `ask-eric`
 
 The included `ask-eric/` directory is a complete Prism instance — a digital twin of Eric's engineering mindset. It demonstrates all 19 perspectives with Eric's specific principles, anti-patterns, and voice.
