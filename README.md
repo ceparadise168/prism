@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/github/v/tag/ceparadise168/prism?label=version)](https://github.com/ceparadise168/prism/releases)
 
-**[繁體中文](README.zh-TW.md)**
+**[Traditional Chinese / 繁體中文](README.zh-TW.md)**
 
 One question in, multiple perspectives out.
 

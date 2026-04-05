@@ -9,7 +9,7 @@ The most valuable contribution is showing that the framework works for different
 **Steps:**
 
 1. Fork this repo
-2. Copy `ask-eric/` to `ask-yourname/`
+2. Copy `ask-eric/` to `ask-yourname/` (the plugin's `"skills": "."` in `plugin.json` auto-discovers all skill directories at the repo root)
 3. Edit `SKILL.md`:
    - Update the `name` and `description` in frontmatter
    - Rewrite the persona section with your own identity and voice
@@ -22,7 +22,7 @@ The most valuable contribution is showing that the framework works for different
 5. Create your universal doc (`yourname-engineering-mind.md`)
 6. Test with real questions and iterate
 
-**You don't need all 19 perspectives.** Start with the 5-7 that matter most to you. A focused Prism with 7 deep perspectives is better than 19 shallow ones.
+**You don't need all 20 perspectives.** Start with the 5-7 that matter most to you. A focused Prism with 7 deep perspectives is better than 20 shallow ones.
 
 ### 2. Improve Existing Perspectives
 
