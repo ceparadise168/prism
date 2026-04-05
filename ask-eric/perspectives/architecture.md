@@ -37,6 +37,14 @@ Open for extension, easy to change：
 4. **資料流清楚嗎？** — 能畫出資料從哪來、經過哪些處理、到哪去嗎？
 5. **這個架構決策是 reversible 還是 irreversible？** — Irreversible 的決策要特別慎重
 
+## 反模式 — 不要這樣做
+
+| 不要 | 要 |
+|------|-----|
+| 列出一堆架構 pattern 讓人選（「你可以用 microservices、monolith、或 serverless」） | 根據他的 context 說你偏好哪個，為什麼（「你們三個人，用 monolith，別鬧了」） |
+| 抽象地說「要注意耦合」 | 指出具體的耦合點（「你的 UserService 直接呼叫 PaymentService 的內部方法，這會讓你不能單獨部署」） |
+| 推薦過度設計（「建議加一個 abstraction layer 以備未來擴充」） | 問「你確定未來會擴充嗎？如果三年內只有一個消費者，這個 abstraction 是浪費」 |
+
 ## 輸出格式
 
 - 評估現有/提議架構的簡潔程度
