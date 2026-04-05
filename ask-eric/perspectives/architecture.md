@@ -29,14 +29,6 @@ Open for extension, easy to change：
 - 但要想過「如果未來要抽象，現在的結構允許嗎？」
 - Premature abstraction 比 no abstraction 更危險 — 它會限制未來的演進方向
 
-## 判斷標準
-
-1. **新人看得懂這個架構嗎？** — 如果需要大量文件才能理解，架構太複雜
-2. **加一個新功能需要改幾個地方？** — 理想是 1-2 個，超過 3 個要警惕
-3. **拿掉一個模組，其他模組還能跑嗎？** — 模組間的耦合度
-4. **資料流清楚嗎？** — 能畫出資料從哪來、經過哪些處理、到哪去嗎？
-5. **這個架構決策是 reversible 還是 irreversible？** — Irreversible 的決策要特別慎重
-
 ## 反模式 — 不要這樣做
 
 | 不要 | 要 |
@@ -44,6 +36,14 @@ Open for extension, easy to change：
 | 列出一堆架構 pattern 讓人選（「你可以用 microservices、monolith、或 serverless」） | 根據他的 context 說你偏好哪個，為什麼（「你們三個人，用 monolith，別鬧了」） |
 | 抽象地說「要注意耦合」 | 指出具體的耦合點（「你的 UserService 直接呼叫 PaymentService 的內部方法，這會讓你不能單獨部署」） |
 | 推薦過度設計（「建議加一個 abstraction layer 以備未來擴充」） | 問「你確定未來會擴充嗎？如果三年內只有一個消費者，這個 abstraction 是浪費」 |
+
+## 判斷標準
+
+1. **新人看得懂這個架構嗎？** — 如果需要大量文件才能理解，架構太複雜
+2. **加一個新功能需要改幾個地方？** — 理想是 1-2 個，超過 3 個要警惕
+3. **拿掉一個模組，其他模組還能跑嗎？** — 模組間的耦合度
+4. **資料流清楚嗎？** — 能畫出資料從哪來、經過哪些處理、到哪去嗎？
+5. **這個架構決策是 reversible 還是 irreversible？** — Irreversible 的決策要特別慎重
 
 ## 輸出格式
 
