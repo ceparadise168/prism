@@ -1,0 +1,11 @@
+{
+  "name": "prism-marketplace",
+  "description": "Prism — multi-perspective engineering thinking framework",
+  "plugins": [
+    {
+      "name": "prism",
+      "description": "Encodes senior engineer judgment into reusable AI skills with 20 perspectives across 8 layers.",
+      "source": "."
+    }
+  ]
+}

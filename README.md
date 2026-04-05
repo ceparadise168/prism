@@ -131,56 +131,58 @@ Cross-perspective consensus: "Your problem is that your argument isn't strong en
 
 ## Quick Start
 
-### Use with Claude Code
+### Use with Claude Code (Plugin)
 
-**Option A: Personal install (available in all your projects)**
+**Step 1 — Add the marketplace:**
+
+```
+/plugin marketplace add ceparadise168/prism
+```
+
+**Step 2 — Install the plugin:**
+
+```
+/plugin install prism@ceparadise168-prism
+```
+
+That's it. Type `/` and look for `prism:ask-eric`:
+
+```
+/prism:ask-eric We're planning to split our monolith into microservices. Team of 5. What do you think?
+```
+
+**Manage the plugin:**
+
+| Action | Command |
+|--------|---------|
+| Update to latest | `/plugin update prism` |
+| Temporarily disable | `/plugin disable prism` |
+| Re-enable | `/plugin enable prism` |
+| Uninstall | `/plugin uninstall prism` |
+| Check status | `/plugin` (opens plugin manager) |
+
+**Share with your team** — add to your project's `.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "ceparadise168-prism": {
+      "source": { "source": "github", "repo": "ceparadise168/prism" }
+    }
+  },
+  "enabledPlugins": {
+    "prism@ceparadise168-prism": true
+  }
+}
+```
+
+Team members will be prompted to install the plugin when they open the project.
+
+**Local testing (for contributors):**
 
 ```bash
 git clone https://github.com/ceparadise168/prism.git
-cp -r prism/ask-eric ~/.claude/skills/ask-eric
-```
-
-**Option B: Project install (shared with your team via git)**
-
-```bash
-git clone https://github.com/ceparadise168/prism.git
-cp -r prism/ask-eric .claude/skills/ask-eric
-# then commit .claude/skills/ask-eric/ to your repo
-```
-
-**Option C: Symlink (auto-sync with upstream)**
-
-```bash
-git clone https://github.com/ceparadise168/prism.git ~/prism
-ln -s ~/prism/ask-eric ~/.claude/skills/ask-eric
-```
-
-After installation, restart Claude Code. The skill is auto-discovered — type `/` and look for `ask-eric`:
-
-```
-/ask-eric We're planning to split our monolith into microservices. Team of 5. What do you think?
-```
-
-**Verify it works:**
-
-```
-/ask-eric hello
-```
-
-You should get a response in Eric's voice (in Traditional Chinese), not generic Claude output.
-
-**Uninstall:**
-
-```bash
-rm -rf ~/.claude/skills/ask-eric     # personal install
-rm -rf .claude/skills/ask-eric       # project install
-```
-
-**Update:**
-
-```bash
-cd ~/prism && git pull                          # if you used symlink (Option C)
-cp -r ~/prism/ask-eric ~/.claude/skills/ask-eric  # if you used copy (Option A)
+claude --plugin-dir ./prism
 ```
 
 ### Use with Any LLM (ChatGPT, Gemini, etc.)
@@ -196,7 +198,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for a step-by-step guide.
 The included `ask-eric/` directory is a complete Prism instance — a digital twin of Eric's engineering mindset. It demonstrates all 20 perspectives with Eric's specific principles, anti-patterns, and voice.
 
 ```
-/ask-eric We want to break our monolith into microservices. Team of 5. Thoughts?
+/prism:ask-eric We want to break our monolith into microservices. Team of 5. Thoughts?
 ```
 
 The skill will:
@@ -214,34 +216,18 @@ The skill will:
 
 ```
 prism/
-├── ask-eric/                      # Example Prism instance
+├── .claude-plugin/
+│   ├── plugin.json                # Plugin manifest
+│   └── marketplace.json           # Marketplace definition
+├── ask-eric/                      # Reference Prism instance (skill)
 │   ├── SKILL.md                   # Coordinator (persona + dispatch + synthesis)
 │   ├── perspectives/              # 20 perspective files
-│   │   ├── guide.md               # Gate power — question the question
-│   │   ├── user-story.md          # JTBD and Design Thinking
-│   │   ├── research.md            # Multi-option trade-off analysis
-│   │   ├── root-cause.md          # Causal chain tracing
-│   │   ├── architecture.md        # Simple, scalable, extensible
-│   │   ├── quality.md             # Naming, cognitive load, clean code
-│   │   ├── security.md            # OWASP, boundary validation
-│   │   ├── methodology.md         # TDD as design tool, architecture patterns
-│   │   ├── maintenance.md         # Tech debt, handoff experience
-│   │   ├── observability.md       # Logging, metrics, tracing
-│   │   ├── incident-response.md   # Stop bleeding, blameless postmortem
-│   │   ├── change-execution.md   # Dependencies, rollback, verification, notification
-│   │   ├── data.md                # Data quality, decision support
-│   │   ├── operations.md          # Closed loop, flywheel
-│   │   ├── customer-experience.md # JTBD, experience consistency
-│   │   ├── pragmatic.md           # Context-driven decisions
-│   │   ├── project-management.md  # Decomposition, incremental delivery
-│   │   ├── value-narrative.md     # ROI, stakeholder communication
-│   │   ├── interpersonal.md       # Read the room, simulate reactions
-│   │   └── governance.md          # API/arch/security/ops governance
-│   └── README.md                  # Installation and usage
+│   └── README.md                  # Skill usage (Traditional Chinese)
 ├── eric-engineering-mind.md       # Universal version (any LLM)
 ├── docs/                          # Design specs and test reports
 ├── LICENSE                        # MIT
-└── README.md                      # This file
+├── README.md                      # This file (English)
+└── README.zh-TW.md               # Traditional Chinese version
 ```
 
 ## License

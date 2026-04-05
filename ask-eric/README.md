@@ -4,44 +4,37 @@ Eric 的工程思維數位分身。不是知識庫，是思維框架。
 
 ## 安裝
 
-### Claude Code
-
-Claude Code 會自動發現 `~/.claude/skills/` 和 `.claude/skills/` 裡的 skill。
-
-```bash
-# 個人安裝（所有專案都能用）
-git clone https://github.com/ceparadise168/prism.git
-cp -r prism/ask-eric ~/.claude/skills/ask-eric
-
-# 或 symlink（方便 git pull 更新）
-git clone https://github.com/ceparadise168/prism.git ~/prism
-ln -s ~/prism/ask-eric ~/.claude/skills/ask-eric
-```
-
-安裝後重新啟動 Claude Code，輸入 `/` 就能看到 `ask-eric`。
-
-**驗證安裝成功：**
+### Claude Code（Plugin 方式）
 
 ```
-/ask-eric 你好
+/plugin marketplace add ceparadise168/prism
+/plugin install prism@ceparadise168-prism
 ```
 
-**更新：** `cd ~/prism && git pull`（symlink 方式）或重新 `cp -r`。
+安裝完成後，輸入 `/` 就能看到 `prism:ask-eric`。
 
-**移除：** `rm -rf ~/.claude/skills/ask-eric`
+**管理：**
+
+| 操作 | 指令 |
+|------|------|
+| 更新 | `/plugin update prism` |
+| 停用 | `/plugin disable prism` |
+| 啟用 | `/plugin enable prism` |
+| 移除 | `/plugin uninstall prism` |
+| 狀態 | `/plugin` |
 
 ## 使用
 
 ```
-/ask-eric 我們的 API response time 最近變很慢，要怎麼處理？
+/prism:ask-eric 我們的 API response time 最近變很慢，要怎麼處理？
 ```
 
 ```
-/ask-eric [貼上 code] 幫我 review 一下
+/prism:ask-eric [貼上 code] 幫我 review 一下
 ```
 
 ```
-/ask-eric 老闆想要加一個即時通知功能，你覺得呢？
+/prism:ask-eric 老闆想要加一個即時通知功能，你覺得呢？
 ```
 
 ## 它會做什麼
