@@ -1,0 +1,13 @@
+# Test workspaces
+*-workspace/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Conversation logs
+conversation/
