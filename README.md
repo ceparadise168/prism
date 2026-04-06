@@ -43,6 +43,10 @@ Key design decisions:
 - **Interaction mode adapts to the audience** — Socratic for juniors, Q&A for peers, de-technicalized for PMs
 - **Perspectives have anti-patterns** — each perspective knows what "generic AI advice" looks like and avoids it
 
+## Demo
+
+[![asciicast](https://asciinema.org/a/BvCp07byXAjNMkrs.svg)](https://asciinema.org/a/BvCp07byXAjNMkrs)
+
 ## Output Examples
 
 Since `ask-eric` responds in Traditional Chinese, quotes below are shown in the original language with English summaries.
