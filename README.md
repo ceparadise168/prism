@@ -231,6 +231,9 @@ prism/
 │   └── prism/
 │       ├── .claude-plugin/
 │       │   └── plugin.json        # Plugin manifest
+│       ├── commands/              # Slash command entry points
+│       │   ├── ask-eric.md        # /prism:ask-eric
+│       │   └── ask-founder.md     # /prism:ask-founder
 │       └── skills/
 │           ├── ask-eric/          # Engineering judgment skill
 │           │   ├── SKILL.md       # Coordinator (persona + dispatch + synthesis)
@@ -241,6 +244,8 @@ prism/
 │               └── perspectives/  # 12 perspective files
 ├── eric-engineering-mind.md       # Universal version (any LLM)
 ├── docs/                          # Design specs and test reports
+├── CHANGELOG.md                   # Version history
+├── CONTRIBUTING.md                # How to create your own Prism
 ├── LICENSE                        # MIT
 ├── README.md                      # This file (English)
 └── README.zh-TW.md               # Traditional Chinese version

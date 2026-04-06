@@ -229,6 +229,9 @@ prism/
 │   └── prism/
 │       ├── .claude-plugin/
 │       │   └── plugin.json        # Plugin manifest
+│       ├── commands/              # Slash command 進入點
+│       │   ├── ask-eric.md        # /prism:ask-eric
+│       │   └── ask-founder.md     # /prism:ask-founder
 │       └── skills/
 │           ├── ask-eric/          # 工程判斷力 skill
 │           │   ├── SKILL.md       # 協調器（人格 + 派發 + 彙整）
@@ -239,6 +242,8 @@ prism/
 │               └── perspectives/  # 12 個視角檔案
 ├── eric-engineering-mind.md       # 通用版本（任何 LLM）
 ├── docs/                          # 設計文件與測試報告
+├── CHANGELOG.md                   # 版本紀錄
+├── CONTRIBUTING.md                # 建立你自己的 Prism
 ├── LICENSE                        # MIT
 ├── README.md                      # 英文版
 └── README.zh-TW.md               # 本檔案（繁體中文）
