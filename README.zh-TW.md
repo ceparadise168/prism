@@ -183,6 +183,15 @@ git clone https://github.com/ceparadise168/prism.git
 claude --plugin-dir ./prism
 ```
 
+本地載入的 plugin 用 `@` 呼叫：
+
+```
+@ask-eric/ 你的問題
+@ask-founder/ 你的問題
+```
+
+注意：本地載入用 `@skill-name/` 語法，不是 `/plugin:skill-name`。
+
 ### 搭配其他 LLM 使用（ChatGPT、Gemini 等）
 
 將 [`eric-engineering-mind.md`](eric-engineering-mind.md) 的內容複製到你的 LLM 系統提示中，或在對話開頭貼上。然後直接提問即可——不需要 slash command。
@@ -193,7 +202,7 @@ claude --plugin-dir ./prism
 
 ## 範例：`ask-eric`
 
-`ask-eric/` 目錄是一個完整的 Prism 實例——Eric 工程思維的數位分身。它展示了全部 20 個視角，包含 Eric 特有的原則、反模式和語氣。
+`plugins/prism/skills/ask-eric/` 目錄是一個完整的 Prism 實例——Eric 工程思維的數位分身。它展示了全部 20 個視角，包含 Eric 特有的原則、反模式和語氣。
 
 ```
 /prism:ask-eric 我們打算把 monolith 拆成 microservices，團隊只有 5 個人，你怎麼看？
@@ -215,12 +224,19 @@ Skill 會：
 ```
 prism/
 ├── .claude-plugin/
-│   ├── plugin.json                # Plugin manifest
 │   └── marketplace.json           # Marketplace 定義
-├── ask-eric/                      # Prism 參考實例（skill）
-│   ├── SKILL.md                   # 協調器（人格 + 派發 + 彙整）
-│   ├── perspectives/              # 20 個視角檔案
-│   └── README.md                  # Skill 使用說明
+├── plugins/
+│   └── prism/
+│       ├── .claude-plugin/
+│       │   └── plugin.json        # Plugin manifest
+│       └── skills/
+│           ├── ask-eric/          # 工程判斷力 skill
+│           │   ├── SKILL.md       # 協調器（人格 + 派發 + 彙整）
+│           │   ├── perspectives/  # 20 個視角檔案
+│           │   └── README.md      # Skill 使用說明
+│           └── ask-founder/       # 創業判斷力 skill
+│               ├── SKILL.md       # 協調器（人格 + 派發 + 彙整）
+│               └── perspectives/  # 12 個視角檔案
 ├── eric-engineering-mind.md       # 通用版本（任何 LLM）
 ├── docs/                          # 設計文件與測試報告
 ├── LICENSE                        # MIT

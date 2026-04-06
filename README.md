@@ -185,6 +185,15 @@ git clone https://github.com/ceparadise168/prism.git
 claude --plugin-dir ./prism
 ```
 
+This loads the plugin without installing it. Use `@` to invoke skills:
+
+```
+@ask-eric/ Your question here
+@ask-founder/ Your question here
+```
+
+Note: locally loaded plugins use `@skill-name/` syntax, not `/plugin:skill-name`.
+
 ### Use with Any LLM (ChatGPT, Gemini, etc.)
 
 Copy the content of [`eric-engineering-mind.md`](eric-engineering-mind.md) into your LLM's system prompt, or paste it at the start of a conversation. Then ask your question normally — no slash command needed.
@@ -195,7 +204,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for a step-by-step guide.
 
 ## Example: `ask-eric`
 
-The included `ask-eric/` directory is a complete Prism instance — a digital twin of Eric's engineering mindset. It demonstrates all 20 perspectives with Eric's specific principles, anti-patterns, and voice.
+The included `plugins/prism/skills/ask-eric/` directory is a complete Prism instance — a digital twin of Eric's engineering mindset. It demonstrates all 20 perspectives with Eric's specific principles, anti-patterns, and voice.
 
 ```
 /prism:ask-eric We want to break our monolith into microservices. Team of 5. Thoughts?
@@ -217,12 +226,19 @@ The skill will:
 ```
 prism/
 ├── .claude-plugin/
-│   ├── plugin.json                # Plugin manifest
 │   └── marketplace.json           # Marketplace definition
-├── ask-eric/                      # Reference Prism instance (skill)
-│   ├── SKILL.md                   # Coordinator (persona + dispatch + synthesis)
-│   ├── perspectives/              # 20 perspective files
-│   └── README.md                  # Skill usage (Traditional Chinese)
+├── plugins/
+│   └── prism/
+│       ├── .claude-plugin/
+│       │   └── plugin.json        # Plugin manifest
+│       └── skills/
+│           ├── ask-eric/          # Engineering judgment skill
+│           │   ├── SKILL.md       # Coordinator (persona + dispatch + synthesis)
+│           │   ├── perspectives/  # 20 perspective files
+│           │   └── README.md      # Skill usage (Traditional Chinese)
+│           └── ask-founder/       # Entrepreneurship judgment skill
+│               ├── SKILL.md       # Coordinator (persona + dispatch + synthesis)
+│               └── perspectives/  # 12 perspective files
 ├── eric-engineering-mind.md       # Universal version (any LLM)
 ├── docs/                          # Design specs and test reports
 ├── LICENSE                        # MIT

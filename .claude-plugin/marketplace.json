@@ -1,11 +1,18 @@
 {
-  "name": "prism-marketplace",
-  "description": "Prism — multi-perspective engineering thinking framework",
+  "name": "prism",
+  "description": "Prism — multi-perspective thinking framework for engineering and entrepreneurship",
+  "owner": {
+    "name": "Eric Tu"
+  },
   "plugins": [
     {
       "name": "prism",
-      "description": "Encodes senior engineer judgment into reusable AI skills with 20 perspectives across 8 layers.",
-      "source": "."
+      "description": "Encodes engineering (20 perspectives) and entrepreneurship (12 perspectives) judgment into reusable AI skills.",
+      "version": "1.3.0",
+      "author": {
+        "name": "Eric Tu"
+      },
+      "source": "./plugins/prism"
     }
   ]
 }
