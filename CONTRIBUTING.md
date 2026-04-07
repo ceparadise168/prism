@@ -20,7 +20,7 @@ The most valuable contribution is showing that the framework works for different
    - Replace the content with your own principles and examples
    - Not every perspective needs to be deep — focus on the ones that represent your strongest opinions
 5. Create your universal doc (`yourname-engineering-mind.md`)
-6. If you want a packaged slash command like `/prism:ask-yourname`, add a matching command file under `plugins/prism/commands/`
+6. If you want a packaged slash command like `/prism:ask-yourname`, add a matching command file under `plugins/prism/commands/` (see [`plugins/prism/commands/ask-eric.md`](plugins/prism/commands/ask-eric.md) for an example)
 7. Test locally with real questions and iterate
 
 **You don't need all 20 perspectives.** Start with the 5-7 that matter most to you. A focused Prism with 7 deep perspectives is better than 20 shallow ones.

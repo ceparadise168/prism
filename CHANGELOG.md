@@ -19,6 +19,8 @@
 - Broken non-Claude-Code reference in `plugins/prism/skills/ask-eric/README.md`
 - Release notes now match the plugin manifests that already declared `1.3.0`
 
+> **Note:** version `1.2.0` was never released. The jump from `1.1.0` to `1.3.0` reflects manifest files that were bumped ahead of changelog during rapid iteration.
+
 ## [1.1.0] - 2026-04-06
 
 ### Added
