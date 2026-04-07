@@ -9,7 +9,7 @@ The most valuable contribution is showing that the framework works for different
 **Steps:**
 
 1. Fork this repo
-2. Copy `ask-eric/` to `ask-yourname/` (the plugin's `"skills": "."` in `plugin.json` auto-discovers all skill directories at the repo root)
+2. Create a new skill directory under `plugins/prism/skills/` by copying `plugins/prism/skills/ask-eric/` to `plugins/prism/skills/ask-yourname/`
 3. Edit `SKILL.md`:
    - Update the `name` and `description` in frontmatter
    - Rewrite the persona section with your own identity and voice
@@ -20,9 +20,12 @@ The most valuable contribution is showing that the framework works for different
    - Replace the content with your own principles and examples
    - Not every perspective needs to be deep — focus on the ones that represent your strongest opinions
 5. Create your universal doc (`yourname-engineering-mind.md`)
-6. Test with real questions and iterate
+6. If you want a packaged slash command like `/prism:ask-yourname`, add a matching command file under `plugins/prism/commands/`
+7. Test locally with real questions and iterate
 
 **You don't need all 20 perspectives.** Start with the 5-7 that matter most to you. A focused Prism with 7 deep perspectives is better than 20 shallow ones.
+
+**Local testing:** run `claude --plugin-dir ./plugins/prism` from the repo root, then invoke the skill by its directory name, for example `@ask-yourname/`. If you add a command file, you can expose it through the packaged `/prism:...` entry point as well.
 
 ### 2. Improve Existing Perspectives
 

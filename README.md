@@ -133,6 +133,11 @@ Cross-perspective consensus: "Your problem is that your argument isn't strong en
 | Execution & Advocacy | Pragmatic, Project Management, Value Narrative, Interpersonal | Can we ship it? Can we get buy-in? |
 | Sustainability | Governance | Can it live and grow? |
 
+## Current Status
+
+- `ask-eric` is the reference implementation. It has documented evaluation artifacts in [`docs/superpowers/specs/2026-04-05-ask-eric-test-analysis-report.md`](docs/superpowers/specs/2026-04-05-ask-eric-test-analysis-report.md).
+- `ask-founder` is included in the plugin and structurally complete, but its published validation is currently lighter. See [`docs/superpowers/specs/2026-04-07-ask-founder-validation-status.md`](docs/superpowers/specs/2026-04-07-ask-founder-validation-status.md).
+
 ## Quick Start
 
 ### Use with Claude Code (Plugin)
@@ -186,7 +191,7 @@ Team members will be prompted to install the plugin when they open the project.
 
 ```bash
 git clone https://github.com/ceparadise168/prism.git
-claude --plugin-dir ./prism
+claude --plugin-dir ./plugins/prism
 ```
 
 This loads the plugin without installing it. Use `@` to invoke skills:

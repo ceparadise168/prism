@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.3.0] - 2026-04-07
+
+### Added
+- `ask-founder` entrepreneurship skill with 12 perspective files and a dedicated coordinator
+- Slash command entry points for `ask-eric` and `ask-founder`
+- Marketplace-compatible plugin packaging under `plugins/prism/`
+- Asciinema demo in the root README
+
+### Changed
+- Repository structure updated to support installable Claude Code plugin workflows
+- Root documentation split into English and Traditional Chinese READMEs
+- Contributor guidance aligned with the packaged `plugins/prism/skills/` layout
+- Validation status is now documented more explicitly: `ask-eric` is the reference implementation, while `ask-founder` is included with lighter published evaluation evidence
+
+### Fixed
+- Broken and misleading extension-path guidance in `CONTRIBUTING.md`
+- Broken non-Claude-Code reference in `plugins/prism/skills/ask-eric/README.md`
+- Release notes now match the plugin manifests that already declared `1.3.0`
+
 ## [1.1.0] - 2026-04-06
 
 ### Added

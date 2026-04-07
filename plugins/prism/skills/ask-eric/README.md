@@ -65,4 +65,4 @@ Eric 的工程思維數位分身。不是知識庫，是思維框架。
 
 ## 非 Claude Code 使用
 
-如果你使用其他 LLM（ChatGPT、Gemini 等），使用 repo 根���錄的 [`eric-engineering-mind.md`](../eric-engineering-mind.md) — 同樣的思維框架，純 Markdown 格式，任何 LLM 都能用。
+如果你使用其他 LLM（ChatGPT、Gemini 等），請使用 repo 根目錄的 `eric-engineering-mind.md`。這份檔案包含相同的思維框架，純 Markdown 格式，任何 LLM 都能用。
